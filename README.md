@@ -1,8 +1,8 @@
 # K3b Distrobox
 
-An Arch-based Distrobox container pre-configured for K3b
+An Arch-based Distrobox container pre-configured for K3b! Dependencies and permissions handled.
 
-## Installation Instructions
+## Installation
 
 Run this `distrobox` command
 
@@ -23,3 +23,11 @@ $ distrobox enter k3b -- k3b
 ```
 
 Or look for the application icon that was created with `distrobox-export` (see [Creating the Application Shortcut](#creating-application-shortcut-optional))
+
+## Removal
+
+Simply remove the container
+
+```bash
+$ distrobox rm k3b
+```
