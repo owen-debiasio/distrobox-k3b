@@ -7,7 +7,7 @@ An Arch-based Distrobox container pre-configured for K3b
 Simply clone this repository and run the setup script:
 
 ```bash
-git clone https://github.com
+git clone https://github.com/owen-debiasio/distrobox-k3b.git
 cd distrobox-k3b
 ./setup.sh
 ```
