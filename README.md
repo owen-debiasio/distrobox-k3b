@@ -7,19 +7,21 @@ An Arch-based Distrobox container pre-configured for K3b! Dependencies and permi
 Run this `distrobox` command
 
 ```bash
-$ distrobox create --name k3b --image ghcr.io/owen-debiasio/distrobox-k3b --additional-flags "--device /dev/sr0:/dev/sr0 --device /dev/cdrom:/dev/cdrom -v /run/media:/run/media:rslave -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket"
+distrobox create --name k3b --image ghcr.io/owen-debiasio/distrobox-k3b --additional-flags "--device /dev/sr0:/dev/sr0 --device /dev/cdrom:/dev/cdrom -v /run/media:/run/media:rslave -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket"
 ```
 
 ### Creating Application shortcut (OPTIONAL)
 
+Run `distrobox-export`
+
 ```bash
-$ distrobox-export --app k3b
+distrobox enter k3b -- distrobox-export --app k3b
 ```
 
 ## Launching K3b
 
 ```bash
-$ distrobox enter k3b -- k3b
+distrobox enter k3b -- k3b
 ```
 
 Or look for the application icon that was created with `distrobox-export` (see [Creating the Application Shortcut](#creating-application-shortcut-optional))
@@ -29,5 +31,6 @@ Or look for the application icon that was created with `distrobox-export` (see [
 Simply remove the container
 
 ```bash
-$ distrobox rm k3b
+distrobox stop k3b
+distrobox rm k3b
 ```
